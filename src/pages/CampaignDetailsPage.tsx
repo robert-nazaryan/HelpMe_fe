@@ -133,8 +133,6 @@ function CampaignDetailsPage() {
     'OTHER': t.campaign.categories.OTHER
   };
 
-  const userBalance = user?.virtualBalance || 0;
-
   return (
       <div className="campaign-details-page">
         {/* Модальное окно для ошибок и уведомлений */}

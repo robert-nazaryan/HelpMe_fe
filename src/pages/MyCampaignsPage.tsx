@@ -34,9 +34,7 @@ function MyCampaignsPage() {
     try {
       await campaignAPI.delete(id);
       setCampaigns(campaigns.filter(c => c.id !== id));
-      alert(t.myCampaigns.deleted);
     } catch (error) {
-      alert(t.myCampaigns.deleteError);
     }
   };
 
