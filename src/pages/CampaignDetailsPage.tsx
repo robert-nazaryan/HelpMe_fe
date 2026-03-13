@@ -36,7 +36,7 @@ function CampaignDetailsPage() {
       setCampaign(campaignRes.data);
       setDonations(donationsRes.data);
       if (campaignRes.data.coverImage) {
-        setSelectedImage(`http://localhost:8080${campaignRes.data.coverImage}`);
+        setSelectedImage(`https://helpme-prod.up.railway.app${campaignRes.data.coverImage}`);
       }
     } catch (error) {
       console.error('Error loading campaign:', error);
@@ -117,7 +117,7 @@ function CampaignDetailsPage() {
 
   const handleDownloadDocument = () => {
     if (campaign?.documentUrl) {
-      window.open(`http://localhost:8080${campaign.documentUrl}`, '_blank');
+      window.open(`https://helpme-prod.up.railway.app${campaign.documentUrl}`, '_blank');
     }
   };
 
@@ -174,11 +174,11 @@ function CampaignDetailsPage() {
                     <h3 className="gallery-title">📸 {t.campaignDetails.gallery}</h3>
                     <div className="gallery-grid">
                       <div
-                          className={`gallery-item ${selectedImage === `http://localhost:8080${campaign.coverImage}` ? 'active' : ''}`}
-                          onClick={() => setSelectedImage(`http://localhost:8080${campaign.coverImage}`)}
+                          className={`gallery-item ${selectedImage === `https://helpme-prod.up.railway.app${campaign.coverImage}` ? 'active' : ''}`}
+                          onClick={() => setSelectedImage(`https://helpme-prod.up.railway.app${campaign.coverImage}`)}
                       >
                         <img
-                            src={`http://localhost:8080${campaign.coverImage}`}
+                            src={`https://helpme-prod.up.railway.app${campaign.coverImage}`}
                             alt="Cover"
                         />
                         <div className="gallery-item-overlay">
@@ -189,11 +189,11 @@ function CampaignDetailsPage() {
                       {campaign.galleryImages.map((imgPath, index) => (
                           <div
                               key={index}
-                              className={`gallery-item ${selectedImage === `http://localhost:8080${imgPath}` ? 'active' : ''}`}
-                              onClick={() => setSelectedImage(`http://localhost:8080${imgPath}`)}
+                              className={`gallery-item ${selectedImage === `https://helpme-prod.up.railway.app${imgPath}` ? 'active' : ''}`}
+                              onClick={() => setSelectedImage(`https://helpme-prod.up.railway.app${imgPath}`)}
                           >
                             <img
-                                src={`http://localhost:8080${imgPath}`}
+                                src={`https://helpme-prod.up.railway.app${imgPath}`}
                                 alt={`Gallery ${index + 1}`}
                             />
                             <div className="gallery-item-overlay">

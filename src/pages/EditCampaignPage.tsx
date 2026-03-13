@@ -53,7 +53,7 @@ function EditCampaignPage() {
             });
 
             if (campaign.coverImage) {
-                setCoverPreview(`http://localhost:8080${campaign.coverImage}`);
+                setCoverPreview(`https://helpme-prod.up.railway.app${campaign.coverImage}`);
             }
 
             if (campaign.documentUrl) {
@@ -165,7 +165,7 @@ function EditCampaignPage() {
             }
 
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:8080/api/campaigns/${id}`, {
+            const response = await fetch(`https://helpme-prod.up.railway.app/api/campaigns/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Authorization': `Bearer ${token}`

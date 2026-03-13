@@ -134,7 +134,7 @@ function CreateCampaignPage() {
       }
 
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:8080/api/campaigns', {
+      const response = await fetch('https://helpme-prod.up.railway.app/api/campaigns', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`
