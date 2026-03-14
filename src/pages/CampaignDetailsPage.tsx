@@ -5,7 +5,6 @@ import { Campaign, Donation } from '../types';
 import { useLanguage } from '../context/LanguageContext';
 import { useAuth } from '../context/AuthContext';
 import './CampaignDetailsPage.css';
-import {imageUrl} from "../utils/url";
 
 function CampaignDetailsPage() {
   const { t } = useLanguage();
@@ -167,7 +166,7 @@ function CampaignDetailsPage() {
             <div className="image-section">
               {selectedImage && (
                   <img
-                      src={imageUrl(selectedImage)}
+                      src={selectedImage}
                       alt={campaign.title}
                       className="detail-image"
                   />
@@ -182,7 +181,7 @@ function CampaignDetailsPage() {
                           onClick={() => setSelectedImage(campaign.coverImage || '')}
                       >
                         <img
-                            src={imageUrl(campaign.coverImage)}
+                            src={campaign.coverImage}
                             alt="Cover"
                         />
                         <div className="gallery-item-overlay">
@@ -197,7 +196,7 @@ function CampaignDetailsPage() {
                               onClick={() => setSelectedImage(imgPath)}
                           >
                             <img
-                                src={imageUrl(imgPath)}
+                                src={imgPath}
                                 alt={`Gallery ${index + 1}`}
                             />
                             <div className="gallery-item-overlay">

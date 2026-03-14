@@ -13,7 +13,7 @@ import type {
   DonationCreateRequest
 } from '../types';
 
-const API_URL = 'https://helpme-prod.up.railway.app/api';
+export const API_URL = 'https://helpme-prod.up.railway.app/api';
 
 const api: AxiosInstance = axios.create({
   baseURL: API_URL,
