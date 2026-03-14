@@ -5,7 +5,7 @@ import { Campaign, Donation } from '../types';
 import { useLanguage } from '../context/LanguageContext';
 import { useAuth } from '../context/AuthContext';
 import './CampaignDetailsPage.css';
-import {imageUrl} from "../utils/url.ts";
+import {imageUrl} from "../utils/url";
 
 function CampaignDetailsPage() {
   const { t } = useLanguage();
@@ -34,9 +34,12 @@ function CampaignDetailsPage() {
         campaignAPI.getById(Number(id)),
         donationAPI.getByCampaign(Number(id))
       ]);
+      console.log("BACKEND coverImage:", campaignRes.data.coverImage);
+      console.log("BACKEND galleryImages:", campaignRes.data.galleryImages);
       setCampaign(campaignRes.data);
       setDonations(donationsRes.data);
       if (campaignRes.data.coverImage) {
+        console.log("SET selectedImage:", campaignRes.data.coverImage);
         setSelectedImage(campaignRes.data.coverImage);
       }
     } catch (error) {
