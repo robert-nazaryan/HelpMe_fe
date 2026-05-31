@@ -10,10 +10,12 @@ import type {
   CampaignStatus,
   CampaignCategory,
   Donation,
-  DonationCreateRequest
+  DonationCreateRequest,
+  Card,
+  CardAddRequest
 } from '../types';
 
-export const API_URL = 'https://helpme-prod.up.railway.app/api';
+export const API_URL = 'http://localhost:8080/api';
 
 const api: AxiosInstance = axios.create({
   baseURL: API_URL,
@@ -71,12 +73,21 @@ export const campaignAPI = {
 };
 
 export const donationAPI = {
-  create: (donationData: DonationCreateRequest) => 
+  create: (donationData: DonationCreateRequest) =>
     api.post<Donation>('/donations', donationData),
-  getByCampaign: (campaignId: number) => 
+  getByCampaign: (campaignId: number) =>
     api.get<Donation[]>(`/donations/campaign/${campaignId}`),
-  getMyDonations: () => 
+  getMyDonations: () =>
     api.get<Donation[]>('/donations/my')
+};
+
+export const paymentAPI = {
+  getCards: () =>
+    api.get<Card[]>('/payment/cards'),
+  addCard: (cardData: CardAddRequest) =>
+    api.post<Card>('/payment/cards', cardData),
+  deleteCard: (cardId: number) =>
+    api.delete<void>(`/payment/cards/${cardId}`)
 };
 
 export default api;
