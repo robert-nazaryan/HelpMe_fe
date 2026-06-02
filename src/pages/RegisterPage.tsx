@@ -51,7 +51,7 @@ function RegisterPage() {
           <h2>{t.auth.register}</h2>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
-              <label className="form-label">{t.auth.fullName}</label>
+              <label className="form-label">{t.auth.fullName}*</label>
               <input
                   type="text"
                   name="fullName"
@@ -63,7 +63,7 @@ function RegisterPage() {
             </div>
 
             <div className="form-group">
-              <label className="form-label">{t.auth.email}</label>
+              <label className="form-label">{t.auth.email}*</label>
               <input
                   type="email"
                   name="email"
@@ -75,7 +75,7 @@ function RegisterPage() {
             </div>
 
             <div className="form-group">
-              <label className="form-label">{t.auth.password}</label>
+              <label className="form-label">{t.auth.password}*</label>
               <input
                   type="password"
                   name="password"

@@ -35,7 +35,7 @@ function LoginPage() {
           <h2>{t.auth.login}</h2>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
-              <label className="form-label">{t.auth.email}</label>
+              <label className="form-label">{t.auth.email}*</label>
               <input
                   type="email"
                   className="form-input"
@@ -46,7 +46,7 @@ function LoginPage() {
             </div>
 
             <div className="form-group">
-              <label className="form-label">{t.auth.password}</label>
+              <label className="form-label">{t.auth.password}*</label>
               <input
                   type="password"
                   className="form-input"
