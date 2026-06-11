@@ -49,15 +49,15 @@ function ProfilePage() {
 
     const cleaned = cardNumber.replace(/\s/g, '');
     if (!/^\d{16}$/.test(cleaned)) {
-      setCardError('Номер карты должен содержать 16 цифр');
+        setCardError(t.cards.errorLength);
       return;
     }
     if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(expiryDate)) {
-      setCardError('Формат даты: MM/YY');
+        setCardError(t.cards.errorExpiry);
       return;
     }
     if (!/^\d{3,4}$/.test(cvv)) {
-      setCardError('CVV должен содержать 3-4 цифры');
+        setCardError(t.cards.errorCvv);
       return;
     }
 
@@ -129,9 +129,9 @@ function ProfilePage() {
           {/* Мои карты */}
           <div className="donations-history card">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
-              <h2 style={{ margin: 0 }}>💳 Мои карты</h2>
+                <h2 style={{ margin: 0 }}>💳 {t.cards.title}</h2>
               <button className="btn btn-primary btn-sm" onClick={() => { setShowAddCard(!showAddCard); setCardError(''); }}>
-                {showAddCard ? 'Отмена' : '+ Добавить карту'}
+                  {showAddCard ? t.cards.cancel : t.cards.add}
               </button>
             </div>
 
@@ -140,7 +140,7 @@ function ProfilePage() {
                   {cardError && <div className="card-error">{cardError}</div>}
                   <div className="card-form-grid">
                     <div className="form-group">
-                      <label>Номер карты</label>
+                        <label>{t.cards.cardNumber}</label>
                       <input
                           type="text"
                           className="form-input"
@@ -152,7 +152,7 @@ function ProfilePage() {
                       />
                     </div>
                     <div className="form-group">
-                      <label>Имя держателя</label>
+                        <label>{t.cards.cardHolder}</label>
                       <input
                           type="text"
                           className="form-input"
@@ -163,7 +163,7 @@ function ProfilePage() {
                       />
                     </div>
                     <div className="form-group">
-                      <label>Срок действия</label>
+                        <label>{t.cards.expiry}</label>
                       <input
                           type="text"
                           className="form-input"
@@ -192,13 +192,13 @@ function ProfilePage() {
                     </div>
                   </div>
                   <button type="submit" className="btn btn-primary" disabled={cardLoading}>
-                    {cardLoading ? 'Сохранение...' : 'Сохранить карту'}
+                      {cardLoading ? t.cards.saving : t.cards.save}
                   </button>
                 </form>
             )}
 
             {cards.length === 0 && !showAddCard ? (
-                <p className="no-donations">Нет сохранённых карт. Добавьте карту для совершения донатов.</p>
+                <p className="no-donations">{t.cards.noCards}</p>
             ) : (
                 <div className="cards-list">
                   {cards.map(card => (
@@ -213,7 +213,7 @@ function ProfilePage() {
                             className="btn btn-danger btn-sm"
                             onClick={() => handleDeleteCard(card.id)}
                         >
-                          Удалить
+                            {t.cards.delete}
                         </button>
                       </div>
                   ))}

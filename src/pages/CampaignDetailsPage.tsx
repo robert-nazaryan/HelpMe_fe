@@ -79,7 +79,7 @@ function CampaignDetailsPage() {
     }
 
     if (!selectedCardId) {
-      showError('Пожалуйста, выберите карту для оплаты. Добавьте карту в профиле.');
+        showError(t.cards.noCardSelected);
       return;
     }
 
@@ -302,11 +302,11 @@ function CampaignDetailsPage() {
                 </div>
 
                 <div className="form-group">
-                  <label>Карта для оплаты</label>
-                  {cards.length === 0 ? (
+                    <label>{t.cards.paymentCard}</label>
+                    {cards.length === 0 ? (
                       <div className="no-card-warning">
-                        У вас нет сохранённых карт.{' '}
-                        <Link to="/profile">Добавьте карту в профиле</Link>
+                          {t.cards.noCardWarning}{' '}
+                          <Link to="/profile">{t.cards.noCardLink}</Link>
                       </div>
                   ) : (
                       <select

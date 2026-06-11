@@ -153,6 +153,28 @@ export const translations = {
             noDonations: 'Вы еще не делали донатов'
         },
 
+        cards: {
+            title: 'Мои карты',
+            add: '+ Добавить карту',
+            cancel: 'Отмена',
+            noCards: 'Нет сохранённых карт. Добавьте карту для совершения донатов.',
+            cardNumber: 'Номер карты',
+            cardHolder: 'Имя держателя',
+            expiry: 'Срок действия',
+            cvv: 'CVV',
+            save: 'Сохранить карту',
+            saving: 'Сохранение...',
+            delete: 'Удалить',
+            errorLength: 'Номер карты должен содержать 16 цифр',
+            errorExpiry: 'Формат даты: MM/YY',
+            errorCvv: 'CVV должен содержать 3-4 цифры',
+            errorAdd: 'Ошибка при добавлении карты',
+            paymentCard: 'Карта для оплаты',
+            noCardWarning: 'У вас нет сохранённых карт.',
+            noCardLink: 'Добавьте карту в профиле',
+            noCardSelected: 'Пожалуйста, выберите карту для оплаты. Добавьте карту в профиле.',
+        },
+
         common: {
             loading: 'Загрузка...',
             error: 'Ошибка',
@@ -356,6 +378,28 @@ export const translations = {
             donationsCount: 'Donations',
             history: 'Donation History',
             noDonations: "You haven't made any donations yet"
+        },
+
+        cards: {
+            title: 'My Cards',
+            add: '+ Add Card',
+            cancel: 'Cancel',
+            noCards: 'No saved cards. Add a card to make donations.',
+            cardNumber: 'Card Number',
+            cardHolder: 'Cardholder Name',
+            expiry: 'Expiry Date',
+            cvv: 'CVV',
+            save: 'Save Card',
+            saving: 'Saving...',
+            delete: 'Delete',
+            errorLength: 'Card number must contain 16 digits',
+            errorExpiry: 'Date format: MM/YY',
+            errorCvv: 'CVV must contain 3-4 digits',
+            errorAdd: 'Error adding card',
+            paymentCard: 'Payment Card',
+            noCardWarning: 'You have no saved cards.',
+            noCardLink: 'Add a card in your profile',
+            noCardSelected: 'Please select a payment card. Add a card in your profile.',
         },
 
         common: {
@@ -564,6 +608,28 @@ export const translations = {
             donationsCount: 'Նվիրատվությունների քանակ',
             history: 'Նվիրատվությունների պատմություն',
             noDonations: 'Դեռ նվիրատվություններ չեք կատարել'
+        },
+
+        cards: {
+            title: 'Իմ քարտերը',
+            add: '+ Ավելացնել քարտ',
+            cancel: 'Չեղարկել',
+            noCards: 'Պահպանված քարտեր չկան։ Ավելացրեք քարտ՝ նվիրատվություններ կատարելու համար։',
+            cardNumber: 'Քարտի համարը',
+            cardHolder: 'Անունը',
+            expiry: 'Վավերականության ժամկետ',
+            cvv: 'CVV',
+            save: 'Պահպանել քարտը',
+            saving: 'Պահպանվում է…',
+            delete: 'Ջնջել',
+            errorLength: 'Քարտի համարը պետք է պարունակի 16 թիվ',
+            errorExpiry: 'Ամսաթվի ձևաչափ՝ ԱԱ/ՏՏ',
+            errorCvv: 'CVV-ը պետք է պարունակի 3-4 թիվ',
+            errorAdd: 'Քարտի ավելացման սխալ',
+            paymentCard: 'Վճարային քարտ',
+            noCardWarning: 'Դուք չունեք պահպանված քարտեր։',
+            noCardLink: 'Ավելացրեք քարտ պրոֆիլում',
+            noCardSelected: 'Խնդրում ենք ընտրել վճարային քարտ։ Ավելացրեք քարտ պրոֆիլում։',
         },
 
         common: {
